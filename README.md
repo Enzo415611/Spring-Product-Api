@@ -27,7 +27,7 @@ lombok
 
 🛠️ Endpoints Principais
 
-Método  -Endpoint - Descrição
+Método - Endpoint - Descrição
 
 GET -	/api/produtos - Lista todos os produtos
 
