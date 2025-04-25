@@ -27,9 +27,9 @@ lombok
 
 🛠️ Endpoints Principais
 
-Método	      Endpoint	          Descrição
+Método	          Endpoint	                      Descrição
 
-GET	       /api/produtos	     Lista todos os produtos
+GET	           /api/produtos	             Lista todos os produtos
 
 GET	        /api/produtos/{id}	     Busca produto por ID
 POST    	  /api/produtos	          Cadastra novo produto
@@ -40,3 +40,5 @@ GET         /api/produtos/          categoria	Filtra por categoria
 🔗 Autor
 
 Enzo Queiroz Costa
+
+
