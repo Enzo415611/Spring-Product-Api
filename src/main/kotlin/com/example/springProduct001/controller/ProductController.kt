@@ -8,27 +8,27 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequestMapping("/cadastro")
+@RequestMapping("/api")
 class ProductController (@Autowired val repositoryProduct: RepositoryProduct){
 
 
 
-    @GetMapping("/getAll")
+    @GetMapping("/produtos")
     fun getAll(): String{
         return repositoryProduct.findAll().toString()
         }
 
-    @GetMapping("/getById")
-    fun getById(@RequestParam(required = true, defaultValue = "0") id: Long): String{
+    @GetMapping("/produtos/{id}")
+    fun getById(@PathVariable id: Long): String{
         return repositoryProduct.findById(id).toString()
     }
 
-    @PostMapping("/save")
+    @PostMapping("/cadastrar")
     fun save(@RequestBody productModel: ProductModel){
         repositoryProduct.save(productModel)
     }
 
-    @PutMapping("/update/{id}")
+    @PutMapping("/produtos/{id}")
     fun update(
         @PathVariable id: Long,
         @RequestBody productModelUpdate: ProductModel
@@ -41,7 +41,7 @@ class ProductController (@Autowired val repositoryProduct: RepositoryProduct){
         return ResponseEntity.ok(usuarioSave)
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/produtos/{id}")
     fun delete(@PathVariable id: Long,){
         val entity = repositoryProduct.findById(id).orElseThrow{ RuntimeException("Produto não encontrado")}
         repositoryProduct.delete(entity)
