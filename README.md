@@ -26,16 +26,13 @@ mysql-connector
 lombok
 
 🛠️ Endpoints Principais
-
-Método	          Endpoint	                      Descrição
-
-GET	           /api/produtos	             Lista todos os produtos
-
-GET	        /api/produtos/{id}	     Busca produto por ID
-POST    	  /api/produtos	          Cadastra novo produto
-PUT   	    /api/produtos/{id}	     Atualiza produto existente
-DELETE      /api/produtos/{id}	     Remove um produto
-GET         /api/produtos/          categoria	Filtra por categoria
+Método	Endpoint	Descrição
+GET	/api/produtos	Lista todos os produtos
+GET	/api/produtos/{id}	Busca produto por ID
+POST	/api/produtos	Cadastra novo produto
+PUT	/api/produtos/{id}	Atualiza produto existente
+DELETE	/api/produtos/{id}	Remove um produto
+GET	/api/produtos/categoria	Filtra por categoria
 
 🔗 Autor
 
