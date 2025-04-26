@@ -3,14 +3,12 @@ package com.example.springProduct001.controller
 
 import com.example.springProduct001.model.ProductModel
 import com.example.springProduct001.repository.RepositoryProduct
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api")
-class ProductController (@Autowired val repositoryProduct: RepositoryProduct){
-
+class ProductController (var repositoryProduct: RepositoryProduct){
 
 
     @GetMapping("/produtos")
@@ -23,7 +21,7 @@ class ProductController (@Autowired val repositoryProduct: RepositoryProduct){
         return repositoryProduct.findById(id).toString()
     }
 
-    @PostMapping("/cadastrar")
+    @PostMapping("/produtos")
     fun save(@RequestBody productModel: ProductModel){
         repositoryProduct.save(productModel)
     }
