@@ -2,7 +2,6 @@ package com.example.springProduct001.model
 
 import jakarta.persistence.*
 import jakarta.validation.constraints.NotBlank
-import java.time.LocalDate
 
 
 @Entity(name = "product")
@@ -14,5 +13,9 @@ data class ProductModel (
     @NotBlank
     var nome: String,
     @NotBlank
-    var validade: String
+    var validade: String,
+    @NotBlank
+    var peso: Int,
+    @NotBlank
+    var consumivel: Boolean
 )
